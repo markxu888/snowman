@@ -1,21 +1,39 @@
 <template>
-  <div id="tab-bar-item">
-    <slot name="icon"></slot>
-    <slot name="text"></slot>
+  <div class="bar-item">
+    <div v-if="isActive"><slot name="icon"></slot></div>
+    <div v-else><slot name="active"></slot></div>
+    <div :class="{active: !isActive}"><slot name="txt"></slot></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "TabBarItem"
+  name: "TabBarItem",
+  data() {
+    return{
+      isActive: true
+    }
+  }
 }
 </script>
 
-<style scoped>
-  #tab-bar-item{
+<style>
+  .bar-item{
     flex: 1;
     text-align: center;
-    height: 49px;
+    /* height: 49px; */
+    font-size: 14px;
+  }
+  .bar-item img {
+    height: 24px;
+    width: 24px;
+    margin-top: 3px;
+    vertical-align: middle;
+    margin-bottom: 0px;
+  }
+  .active{
+    font-size: 14px;
+    color: blue;
   }
 
 </style>

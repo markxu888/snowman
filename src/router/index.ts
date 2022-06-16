@@ -1,3 +1,4 @@
+// import { Vue } from 'vue-class-component'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
@@ -5,7 +6,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "about" */ '../App.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/blackboard/Blackboard.vue')
   },
   {
     path: '/about',

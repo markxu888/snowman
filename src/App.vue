@@ -1,13 +1,39 @@
 <template>
-  <div>
-    <TabBar>
-      <TabBarItem>
-        <img slot="icon" src="@\assets\img\tabbar\zhuye.svg" alt="">
-        <div slot="text">主页</div>
-      </TabBarItem>
-  
-    </TabBar>
-  </div>
+  <tab-bar>
+    <tab-bar-item>
+      <template v-slot:icon>
+        <img src="@/assets/img/tabbar/blackboard.svg" alt="">
+      </template>
+      <template v-slot:active>
+        <img src="@/assets/img/tabbar/blackboardWrite.svg" alt="">
+      </template>
+      <template v-slot:txt>
+        <div >黑板</div>
+      </template>  
+    </tab-bar-item>
+    <tab-bar-item>
+      <template v-slot:icon>
+        <img src="@/assets/img/tabbar/snowman.svg" alt="">
+      </template>
+      <template v-slot:active>
+        <img src="@/assets/img/tabbar/snowmanfight.svg" alt="">
+      </template>
+      <template v-slot:txt>
+        <div >打雪仗</div>
+      </template>  
+    </tab-bar-item>
+    <tab-bar-item>
+      <template v-slot:icon>
+        <img src="@/assets/img/tabbar/home.svg" alt="">
+      </template>
+      <template v-slot:active>
+        <img src="@/assets/img/tabbar/homeing.svg" alt="">
+      </template>
+      <template v-slot:txt>
+        <div >回家</div>
+      </template>  
+    </tab-bar-item>
+  </tab-bar>
 </template>
 
 <script>
