@@ -1,5 +1,5 @@
 <template>
-  <div class="bar-item">
+  <div class="bar-item" @click="itemclick">
     <div v-if="isActive"><slot name="icon"></slot></div>
     <div v-else><slot name="active"></slot></div>
     <div :class="{active: !isActive}"><slot name="txt"></slot></div>
@@ -7,11 +7,20 @@
 </template>
 
 <script>
+import router from '@/router'
 export default {
   name: "TabBarItem",
+  props: {
+    path: String
+  },
   data() {
     return{
       isActive: true
+    }
+  },
+  methods: {
+    itemclick() {
+      this.$router.push(this.path)
     }
   }
 }
