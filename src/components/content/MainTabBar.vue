@@ -8,7 +8,7 @@
         <img src="~assets/img/tabbar/blackboardWrite.svg" alt="">
       </template>
       <template v-slot:text>
-        <div >黑板</div>
+        <div >白板</div>
       </template>  
     </tab-bar-item>
     <tab-bar-item path="/snowman">
@@ -38,8 +38,7 @@
 
 <script>
   
-  import TabBar from '../common/tabbar/TabBar.vue'
-  import TabBarItem from '../common/tabbar/TabBarItem.vue'
+  import {TabBar,TabBarItem} from '../common/tabbar/index'
 
   export default {
     name: 'MainTabBar',

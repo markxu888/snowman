@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import {getBlackBoardMilt} from "network/blackboard"
+  import {getBlackBoardMult} from "network/blackboard.js"
   export default {
     name: "blackboard",
     data() {
@@ -12,7 +12,7 @@
       }
     },
     created() {
-      getBlackBoardMilt().then(res => {
+      getBlackBoardMult().then(res => {
         this.result = res
       })
     }
