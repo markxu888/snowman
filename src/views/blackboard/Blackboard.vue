@@ -3,8 +3,19 @@
 </template>
 
 <script>
+  import {getBlackBoardMilt} from "network/blackboard"
   export default {
-    name: "blackboard"
+    name: "blackboard",
+    data() {
+      return {
+        result: null
+      }
+    },
+    created() {
+      getBlackBoardMilt().then(res => {
+        this.result = res
+      })
+    }
   }  
 </script>
 
