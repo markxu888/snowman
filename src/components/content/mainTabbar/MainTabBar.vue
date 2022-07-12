@@ -38,7 +38,7 @@
 
 <script>
   
-  import {TabBar,TabBarItem} from '../common/tabbar/index'
+  import {TabBar,TabBarItem} from '../../common/tabbar/index'
 
   export default {
     name: 'MainTabBar',

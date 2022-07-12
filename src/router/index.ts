@@ -2,10 +2,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
-  // {
-  //   path: "",
-  //   redirect: "/blackboard"
-  // },
+  {
+    path: "",
+    redirect: "/blackboard"
+  },
   {
     path: "/blackboard",
     component: () => import('@/views/blackboard/Blackboard.vue')

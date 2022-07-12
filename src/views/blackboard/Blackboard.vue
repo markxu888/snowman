@@ -1,11 +1,20 @@
 <template>
-  <h2>黑板</h2>  
+  <div id="home">
+    <nav-bar>
+      <template v-slot:center>小黑板</template>
+    </nav-bar>
+  </div>  
 </template>
 
 <script>
+  import NavBar from "@/components/common/navBar/NavBar.vue"
+
   import {getBlackBoardMult} from "network/blackboard.js"
   export default {
     name: "blackboard",
+    components: {
+      NavBar
+    },
     data() {
       return {
         result: null
