@@ -7,7 +7,7 @@ import axios from 'axios'
 
 createApp(App).use(store).use(router).mount('#app')
 
- App.config.globalProperties.$axiso = axios
+// App.config.globalProperties.$axiso = axios
 // const app = createApp(App)
 // app.use(store)
 // app.use(ElementPlus)
