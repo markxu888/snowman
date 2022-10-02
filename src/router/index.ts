@@ -1,7 +1,7 @@
 // import { Vue } from 'vue-class-component'
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter,createWebHistory} from 'vue-router'
 
-const routes: Array<RouteRecordRaw> = [
+const routes= [
   {
     path: "",
     redirect: "/blackboard"
